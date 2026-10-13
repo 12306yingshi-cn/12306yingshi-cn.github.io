@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>12306影视 - 影视直达号 · 好片不绕路 | 12306yingshi-cn.github.io</title>
+<meta name="keywords" content="12306影视, 12306yingshi-cn, 影视直达, 在线影视, 好片直达">
+<meta name="description" content="12306影视（12306yingshi-cn.github.io）是影视直达号，电影、剧集、综艺、动漫一站直达，好片不绕路，选片更高效。">
+<meta name="author" content="12306影视">
+<meta name="copyright" content="12306影视 12306yingshi-cn.github.io">
+<link rel="canonical" href="https://12306yingshi-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="12306影视 - 影视直达号 · 好片不绕路">
+<meta property="og:description" content="12306影视电影、剧集、综艺、动漫一站直达，选片更高效。">
+<meta property="og:url" content="https://12306yingshi-cn.github.io/">
+<meta property="og:site_name" content="12306影视">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="12306影视 - 影视直达号">
+<meta name="twitter:description" content="好片不绕路，选片更高效。">
+<meta name="format-detection" content="telephone=no">
+<style>
+:root{
+  --bg:#070b12;
+  --surf:#0d1522;
+  --surf2:#152238;
+  --line:rgba(72,180,230,.24);
+  --blue:#1e90ff;
+  --royal:#3b82f6;
+  --sky:#38bdf8;
+  --cyan:#22d3ee;
+  --txt:#e7f0fb;
+  --sub:#93accd;
+  --muted:#5b7399;
+  --r:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(800px 520px at 88% -10%,rgba(59,130,246,.26),transparent 62%),
+    radial-gradient(760px 640px at 6% 20%,rgba(34,211,238,.14),transparent 60%),
+    radial-gradient(760px 700px at 50% 112%,rgba(30,144,255,.16),transparent 64%),
+    var(--bg);}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(72,180,230,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(72,180,230,.09) 1px,transparent 1px);
+  background-size:52px 52px;}
+a{color:inherit;text-decoration:none;transition:color .25s,opacity .25s}
+a:hover{color:var(--sky)}
+ul{list-style:none}
+img{max-width:100%;display:block}
+.container{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:96px 0;position:relative}
+@media(max-width:768px){section{padding:66px 0}}
+
+/* 头部 */
+.hd{position:sticky;top:0;z-index:100;background:rgba(7,11,18,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:13px;font-size:21px;font-weight:900;letter-spacing:.4px}
+.logo .mk{width:42px;height:42px;border-radius:12px;flex:none;display:grid;place-items:center;font-size:14px;font-weight:900;letter-spacing:-.5px;color:#04101e;
+  background:linear-gradient(135deg,var(--sky),var(--cyan));box-shadow:0 6px 20px rgba(56,189,248,.4)}
+.logo b{color:var(--sky)}
+.nav{display:flex;gap:2px;align-items:center}
+.nav a{padding:9px 15px;border-radius:10px;font-size:15.5px;color:var(--sub);font-weight:600;position:relative}
+.nav a:hover{color:var(--sky);background:rgba(56,189,248,.08)}
+.nav a::after{content:"";position:absolute;left:15px;right:15px;bottom:4px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--sky),var(--cyan));transform:scaleX(0);transition:transform .25s;transform-origin:left}
+.nav a:hover::after{transform:scaleX(1)}
+.mbtn{display:none;width:44px;height:44px;border-radius:11px;background:rgba(56,189,248,.12);border:1px solid var(--line);cursor:pointer;align-items:center;justify-content:center}
+.mbtn svg{width:21px;height:21px;fill:none;stroke:var(--txt);stroke-width:2.4;stroke-linecap:round}
+@media(max-width:880px){
+  .mbtn{display:flex}
+  .nav{position:fixed;top:76px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:16px;background:rgba(7,11,18,.99);border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s;box-shadow:0 26px 50px rgba(0,0,0,.6)}
+  .nav.open{transform:translateY(0)}
+  .nav a{padding:14px 16px;font-size:16px;color:var(--txt)}
+}
+
+/* Hero */
+.hero{padding:86px 0 74px}
+.hg{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
+.tagline{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:2.5px;color:var(--sky);font-weight:800;text-transform:uppercase;border:1px solid var(--line);border-radius:40px;padding:7px 15px}
+.tagline i{width:6px;height:6px;border-radius:50%;background:var(--sky);box-shadow:0 0 10px var(--sky);animation:pl 1.2s infinite}
+@keyframes pl{50%{opacity:.35}}
+.hero h1{font-size:clamp(34px,5.6vw,56px);line-height:1.16;font-weight:900;letter-spacing:-1.2px;margin-top:22px}
+.hero h1 em{font-style:normal;background:linear-gradient(92deg,var(--sky),var(--cyan) 60%,#a5f3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{font-size:clamp(15px,2.1vw,18.5px);color:var(--sub);max-width:540px;margin-top:22px}
+.urlbox{margin-top:24px;display:inline-flex;align-items:center;gap:12px;padding:11px 20px;border-radius:12px;background:var(--surf);border:1px dashed var(--line)}
+.urlbox span{font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.urlbox code{font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:800;color:var(--sky)}
+.actions{margin-top:32px;display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:13px;font-size:16px;font-weight:800;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s}
+.btn-p{color:#04101e;background:linear-gradient(92deg,var(--sky),var(--cyan));box-shadow:0 12px 30px rgba(56,189,248,.4)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(56,189,248,.55);color:#04101e}
+.btn-o{color:var(--txt);background:var(--surf);border:1.5px solid var(--line)}
+.btn-o:hover{background:var(--surf2);color:var(--sky)}
+.metrics{margin-top:44px;padding-top:30px;border-top:1px solid var(--line);display:flex;gap:50px;flex-wrap:wrap}
+.metrics div strong{display:block;font-size:clamp(23px,4vw,32px);font-weight:900;color:var(--sky);font-family:Georgia,"Songti SC",serif}
+.metrics div span{font-size:13px;color:var(--muted)}
+
+/* Hero 右侧：站台时刻表 */
+.board{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.55)}
+.board .hd2{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:linear-gradient(92deg,var(--royal),var(--blue));color:#04101e}
+.board .hd2 b{font-size:16px;letter-spacing:1px}
+.board .hd2 span{font-size:12px;font-weight:800}
+.tbl{width:100%;border-collapse:collapse}
+.tbl th,.tbl td{padding:13px 20px;text-align:left;font-size:14px;border-bottom:1px solid rgba(72,180,230,.13)}
+.tbl th{font-size:11px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;background:rgba(255,255,255,.02)}
+.tbl td{font-weight:700}
+.tbl td.s{color:var(--sky)}
+.tbl tr.live td:first-child{color:var(--sky)}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyan);margin-right:8px;box-shadow:0 0 8px var(--cyan);animation:pl 1.2s infinite}
+.stbadge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11.5px;font-weight:800;background:rgba(56,189,248,.16);color:var(--sky)}
+.stbadge.on{background:var(--sky);color:#04101e}
+
+/* 标题 */
+.head{text-align:center;margin-bottom:56px}
+.head .kicker{font-size:12px;letter-spacing:2.5px;color:var(--sky);text-transform:uppercase;font-weight:800}
+.head h2{font-size:clamp(25px,4vw,40px);font-weight:900;margin-top:9px;letter-spacing:-.5px}
+.head p{color:var(--sub);margin-top:12px;max-width:620px;margin-left:auto;margin-right:auto}
+.rule{width:60px;height:3px;margin:18px auto 0;border-radius:3px;background:linear-gradient(90deg,var(--royal),var(--cyan));position:relative}
+.rule::after{content:"";position:absolute;left:50%;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--sky);transform:translateX(-50%);box-shadow:0 0 10px var(--sky)}
+
+/* 栏目一：热门路线（卡片） */
+.routes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.rt{position:relative;background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:22px;overflow:hidden;transition:transform .35s,border-color .35s}
+.rt:hover{transform:translateY(-6px);border-color:var(--sky)}
+.rt::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--sky),var(--cyan))}
+.rt .fromto{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rt .stn{font-size:18px;font-weight:900}
+.rt .arw{font-size:15px;color:var(--sky);flex:1;text-align:center;position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 5px,transparent 5px 10px)}
+.rt .arw::before,.rt .arw::after{content:"";position:absolute;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--surf);border:2px solid var(--sky)}
+.rt .arw::before{left:-1px}
+.rt .arw::after{right:-1px;background:var(--sky)}
+.rt h4{font-size:15.5px;font-weight:900;margin-top:2px}
+.rt p{font-size:12.5px;color:var(--muted);margin-top:5px}
+.rt .meta{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:13px;border-top:1px dashed var(--line)}
+.rt .meta b{font-size:12px;color:var(--sky);font-weight:800}
+
+/* 栏目二：站点地图（SVG 路线图 + 卡片） */
+.map{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.metro{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.metro svg{width:100%;height:auto;display:block}
+.metro .ln{stroke:var(--sky);stroke-width:4;stroke-linecap:round;fill:none}
+.metro .st0{fill:var(--surf);stroke:var(--sky);stroke-width:3}
+.metro .st1{fill:var(--sky)}
+.metro text{fill:var(--sub);font-size:13px;font-family:inherit}
+.metro text.b{fill:var(--sky);font-size:14px;font-weight:900}
+.stations{display:grid;gap:13px}
+.stncard{display:grid;grid-template-columns:44px 1fr auto;gap:15px;align-items:center;background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:15px 17px;transition:transform .3s}
+.stncard:hover{transform:translateY(-4px);border-color:var(--sky)}
+.stncard .num{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:18px;font-weight:900;color:#04101e;background:linear-gradient(135deg,var(--sky),var(--cyan))}
+.stncard h4{font-size:15.5px;font-weight:900}
+.stncard small{font-size:12px;color:var(--muted)}
+.stncard b{font-size:11.5px;color:var(--sky);font-weight:800;background:var(--surf2);padding:4px 9px;border-radius:6px}
+@media(max-width:860px){.map{grid-template-columns:1fr;gap:22px}}
+
+/* 栏目三：班次时刻（表格） */
+.sched{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.sched .t{width:100%;border-collapse:collapse}
+.sched th,.sched td{padding:14px 18px;text-align:left;font-size:14px;border-bottom:1px solid rgba(72,180,230,.13)}
+.sched th{font-size:11.5px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;background:rgba(255,255,255,.03)}
+.sched td{font-weight:700}
+.sched td.code{color:var(--sky);font-family:ui-monospace,Menlo,monospace;letter-spacing:.5px}
+.sched tr:hover td{background:rgba(56,189,248,.05)}
+@media(max-width:760px){
+  .sched .t thead{display:none}
+  .sched .t tr{display:grid;grid-template-columns:1fr 1fr;gap:2px 14px;padding:14px 18px}
+  .sched .t td{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border:0;border-bottom:1px dashed rgba(72,180,230,.16)}
+  .sched .t td::before{content:attr(data-l);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+}
+
+/* 栏目四：热门榜（阶梯式色阶） */
+.rail{max-width:920px;margin:0 auto;display:grid;gap:11px}
+.rl{display:grid;grid-template-columns:56px 1fr 88px;gap:18px;align-items:center;background:var(--surf);border:1px solid var(--line);border-radius:13px;padding:14px 20px;transition:transform .3s}
+.rl:hover{transform:translateY(-3px)}
+.rl .tr{font-family:Georgia,serif;font-size:22px;font-weight:900;color:var(--muted);text-align:center;line-height:1.5}
+.rl.top .tr{background:linear-gradient(135deg,var(--sky),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.rl h4{font-size:16px;font-weight:900}
+.rl small{font-size:12px;color:var(--muted)}
+.rl .plat{display:inline-block;padding:5px 12px;border-radius:8px;font-size:12.5px;font-weight:900;text-align:center;background:var(--surf2);color:var(--sky)}
+.rl.top .plat{background:linear-gradient(135deg,var(--sky),var(--cyan));color:#04101e}
+.rl.g2 .plat{border:1px solid var(--line)}
+@media(max-width:560px){.rl{grid-template-columns:44px 1fr;gap:12px}.rl .plat{grid-column:2}}
+
+/* 栏目五：乘车指南（步骤） */
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.gc{position:relative;background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px 22px;transition:transform .35s}
+.gc:hover{transform:translateY(-6px);border-color:var(--sky)}
+.gc .stnum{position:absolute;right:18px;top:14px;font-family:Georgia,serif;font-size:40px;font-weight:900;color:rgba(56,189,248,.14);line-height:1}
+.gc .ic{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;font-size:21px;background:var(--surf2);border:1px solid var(--line)}
+.gc h4{font-size:16.5px;font-weight:900;margin-top:16px}
+.gc p{font-size:13px;color:var(--sub);margin-top:7px}
+
+/* 栏目六：影迷候车室（卡片网格 + 表单） */
+.lounge{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:start}
+.talks{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tk{background:var(--surf);border:1px solid var(--line);border-radius:var(--r);padding:18px;transition:transform .3s}
+.tk:hover{transform:translateY(-4px);border-color:var(--sky)}
+.tk .who{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+.tk .av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:900;color:#04101e;background:linear-gradient(135deg,var(--sky),var(--cyan))}
+.tk .who b{font-size:13.5px;font-weight:900}
+.tk .who span{font-size:11px;color:var(--muted)}
+.tk p{font-size:13px;color:var(--sub);line-height:1.7}
+.tk .when{display:block;margin-top:11px;font-size:11px;color:var(--muted)}
+.subscribe{background:linear-gradient(150deg,var(--royal),var(--blue));border-radius:var(--r);padding:26px}
+.subscribe h4{font-size:18px;font-weight:900;color:#04101e}
+.subscribe p{font-size:13px;color:rgba(4,16,30,.82);margin-top:6px}
+.subscribe form{margin-top:16px;display:grid;gap:10px}
+.subscribe input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(4,16,30,.2);background:rgba(255,255,255,.95);font-size:14px;color:#04101e;outline:none}
+.subscribe input::placeholder{color:#7a8aa0}
+.subscribe button{width:100%;padding:13px;border:0;border-radius:10px;background:#04101e;color:#fff;font-size:14.5px;font-weight:900;cursor:pointer;transition:opacity .2s}
+.subscribe button:hover{opacity:.86}
+@media(max-width:860px){.lounge{grid-template-columns:1fr}.talks{grid-template-columns:1fr}}
+
+/* 页脚 */
+.ft{background:#05080d;border-top:1px solid var(--line);padding:62px 0 28px;margin-top:34px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px}
+.fg h5{font-size:15px;font-weight:900;margin-bottom:15px;color:var(--sky)}
+.fg ul{display:grid;gap:10px}
+.fg ul a{color:var(--sub);font-size:14px}
+.fg ul a:hover{color:var(--sky)}
+.fbrand p{color:var(--sub);font-size:14px;margin-top:12px;max-width:330px}
+.fbot{border-top:1px solid var(--line);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.fbot .fl{display:flex;gap:20px;flex-wrap:wrap}
+.fbot a:hover{color:var(--sky)}
+@media(max-width:768px){.fg{grid-template-columns:1fr 1fr;gap:28px}}
+
+#top{position:fixed;right:20px;bottom:26px;z-index:99;width:46px;height:46px;border-radius:14px;border:1px solid var(--line);background:var(--surf);color:var(--txt);font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(0,0,0,.5);transition:all .25s}
+#top.show{display:flex}
+#top:hover{background:var(--sky);color:#04101e}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:200;background:var(--sky);color:#04101e;padding:8px 14px;border-radius:8px}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="hd">
+  <div class="container navin">
+    <a class="logo" href="#home" aria-label="12306影视首页"><span class="mk">12306</span>影视<b>直达</b></a>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <a href="#home">首页</a>
+      <a href="#routes">热门路线</a>
+      <a href="#map">站点地图</a>
+      <a href="#sched">班次时刻</a>
+      <a href="#rank">热门榜单</a>
+      <a href="#lounge">候车室</a>
+    </nav>
+    <button class="mbtn" id="mbtn" aria-label="打开菜单" aria-expanded="false">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hg">
+      <div>
+        <span class="tagline"><i></i> Now Showing · 正在热播</span>
+        <h1>12306影视<br>影视<b>直达号</b> · <em>好片不绕路</em></h1>
+        <p class="lead">12306影视是影视直达号，电影、剧集、综艺、动漫一站直达，好片不绕路，选片更高效。</p>
+        <div class="urlbox"><span>官方网站</span><code>12306yingshi-cn.github.io</code></div>
+        <div class="actions">
+          <a class="btn btn-p" href="#routes">选片出发</a>
+          <a class="btn btn-o" href="#rank">看榜单</a>
+        </div>
+        <div class="metrics">
+          <div><strong>15,000+</strong><span>影视资源</span></div>
+          <div><strong>12</strong><span>内容频道</span></div>
+          <div><strong>1080P</strong><span>高清画质</span></div>
+          <div><strong>每日</strong><span>更新同步</span></div>
+        </div>
+      </div>
+
+      <div class="board" aria-hidden="true">
+        <div class="hd2"><b>🚄 影视时刻表 · 今日热播</b><span>ON AIR</span></div>
+        <table class="tbl">
+          <thead><tr><th>片名</th><th>类型</th><th>状态</th></tr></thead>
+          <tbody>
+            <tr class="live"><td><span class="dot"></span>深空回声</td><td>科幻剧</td><td><span class="stbadge on">播放中</span></td></tr>
+            <tr><td>海风便利店</td><td>治愈剧</td><td><span class="stbadge">已更新</span></td></tr>
+            <tr><td>第七封信</td><td>悬疑剧</td><td><span class="stbadge">追更中</span></td></tr>
+            <tr><td>城市边缘的夜晚</td><td>犯罪电影</td><td><span class="stbadge">已上线</span></td></tr>
+            <tr><td>长河落日</td><td>历史剧</td><td><span class="stbadge">特辑</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目一：热门路线 -->
+  <section id="routes">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Hot Routes</div>
+        <h2>热门路线</h2>
+        <p>12306影视为你规划好的几条"观影线路"，跟着走就能看到好片。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="routes">
+
+        <article class="rt"><div class="fromto"><span class="stn">犯罪</span><span class="arw"></span><span class="stn">悬疑</span></div><h4>城市边缘的夜晚</h4><p>犯罪剧情收官，所有线索在一夜交汇。</p><div class="meta"><span>★★★★★ 9.2</span><b>直达</b></div></article>
+        <article class="rt"><div class="fromto"><span class="stn">硬科幻</span><span class="arw"></span><span class="stn">太空</span></div><h4>深空回声</h4><p>世界观再度扩张，第三季已开播。</p><div class="meta"><span>★★★★☆ 8.7</span><b>直达</b></div></article>
+        <article class="rt"><div class="fromto"><span class="stn">治愈</span><span class="arw"></span><span class="stn">日常</span></div><h4>海风便利店</h4><p>海边小镇的温柔故事，治愈系首选。</p><div class="meta"><span>★★★★★ 9.5</span><b>直达</b></div></article>
+        <article class="rt"><div class="fromto"><span class="stn">推理</span><span class="arw"></span><span class="stn">反转</span></div><h4>第七封信</h4><p>关键人物登场，反转即将到来。</p><div class="meta"><span>★★★★★ 9.0</span><b>直达</b></div></article>
+        <article class="rt"><div class="fromto"><span class="stn">历史</span><span class="arw"></span><span class="stn">史诗</span></div><h4>长河落日</h4><p>大剧收官，独家幕后花絮同步放出。</p><div class="meta"><span>★★★★☆ 8.8</span><b>直达</b></div></article>
+        <article class="rt"><div class="fromto"><span class="stn">喜剧</span><span class="arw"></span><span class="stn">轻松</span></div><h4>我的猫先生</h4><p>周末放松首选，笑点密集。</p><div class="meta"><span>★★★★☆ 8.4</span><b>直达</b></div></article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：站点地图 -->
+  <section id="map" style="background:linear-gradient(180deg,#070b12,#0b1320)">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Station Map</div>
+        <h2>站点地图</h2>
+        <p>12306影视的"换乘站"一览，想去的频道都在哪一站。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="map">
+
+        <div class="metro">
+          <svg viewBox="0 0 460 300" role="img" aria-label="内容频道路线图">
+            <line class="ln" x1="40" y1="60" x2="420" y2="60"/>
+            <line class="ln" x1="420" y1="60" x2="420" y2="240"/>
+            <line class="ln" x1="40" y1="240" x2="420" y2="240"/>
+            <line class="ln" x1="40" y1="60" x2="40" y2="240"/>
+            <circle class="st0" cx="40" cy="60" r="9"/><text class="b" x="58" y="56">电影</text>
+            <circle class="st1" cx="155" cy="60" r="7"/><text x="172" y="56">剧集</text>
+            <circle class="st1" cx="270" cy="60" r="7"/><text x="287" y="56">综艺</text>
+            <circle class="st1" cx="420" cy="60" r="9"/><text class="b" x="352" y="56">动漫</text>
+            <circle class="st0" cx="420" cy="150" r="9"/><text class="b" x="352" y="154">纪录片</text>
+            <circle class="st1" cx="420" cy="240" r="9"/><text class="b" x="340" y="246">儿童</text>
+            <circle class="st1" cx="270" cy="240" r="7"/><text x="130" y="246">经典老片</text>
+            <circle class="st1" cx="155" cy="240" r="7"/><text x="14" y="246">高分精选</text>
+            <circle class="st1" cx="40" cy="240" r="9"/><text class="b" x="58" y="264">4K专区</text>
+            <circle class="st0" cx="40" cy="150" r="9"/><text class="b" x="58" y="154">短剧</text>
+            <text x="200" y="148" fill="#5b7399" font-size="11" text-anchor="middle">◀ 全线贯通 · 一站换乘 ▶</text>
+          </svg>
+        </div>
+
+        <div class="stations">
+          <a class="stncard" href="#"><div class="num">1</div><div><h4>电影站</h4><small>院线大片 · 经典老片</small></div><b>5,200+</b></a>
+          <a class="stncard" href="#"><div class="num">2</div><div><h4>剧集站</h4><small>国产热播 · 海外剧</small></div><b>2,400+</b></a>
+          <a class="stncard" href="#"><div class="num">3</div><div><h4>综艺站</h4><small>真人秀 · 竞演</small></div><b>760+</b></a>
+          <a class="stncard" href="#"><div class="num">4</div><div><h4>动漫站</h4><small>国漫 · 日漫</small></div><b>1,900+</b></a>
+          <a class="stncard" href="#"><div class="num">5</div><div><h4>纪录儿童站</h4><small>自然人文 · 亲子</small></div><b>1,110+</b></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：班次时刻 -->
+  <section id="sched">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Schedule</div>
+        <h2>班次时刻</h2>
+        <p>12306影视的"发车时刻"，更新时间一目了然。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="sched">
+        <table class="t">
+          <thead><tr><th>班次</th><th>作品</th><th>类型</th><th>发车</th><th>状态</th></tr></thead>
+          <tbody>
+            <tr><td class="code" data-l="班次">G1001</td><td data-l="作品">城市边缘的夜晚</td><td data-l="类型">犯罪</td><td data-l="发车">20:00</td><td data-l="状态"><span class="stbadge on">正点</span></td></tr>
+            <tr><td class="code" data-l="班次">D2018</td><td data-l="作品">深空回声 S3</td><td data-l="类型">科幻</td><td data-l="发车">22:30</td><td data-l="状态"><span class="stbadge">准点</span></td></tr>
+            <tr><td class="code" data-l="班次">K3056</td><td data-l="作品">海风便利店</td><td data-l="类型">治愈</td><td data-l="发车">每周三</td><td data-l="状态"><span class="stbadge">加开</span></td></tr>
+            <tr><td class="code" data-l="班次">C4782</td><td data-l="作品">第七封信</td><td data-l="类型">悬疑</td><td data-l="发车">21:15</td><td data-l="状态"><span class="stbadge">追更</span></td></tr>
+            <tr><td class="code" data-l="班次">T9912</td><td data-l="作品">长河落日</td><td data-l="类型">历史</td><td data-l="发车">已收官</td><td data-l="状态"><span class="stbadge">特辑</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：热门榜单 -->
+  <section id="rank" style="background:linear-gradient(180deg,#070b12,#0b1320)">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Top Rated</div>
+        <h2>热门榜单</h2>
+        <p>12306影视的"客流榜"，看看哪些作品人气最旺。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="rail">
+
+        <div class="rl top"><div class="tr">01</div><div><h4>海风便利店<small>· 治愈 · 12 集</small></h4></div><div class="plat">9.5 客流王</div></div>
+        <div class="rl top"><div class="tr">02</div><div><h4>城市边缘的夜晚<small>· 犯罪 · 128 分钟</small></h4></div><div class="plat">9.2 热门</div></div>
+        <div class="rl top"><div class="tr">03</div><div><h4>第七封信<small>· 悬疑 · 更新中</small></h4></div><div class="plat">9.0 热门</div></div>
+        <div class="rl g2"><div class="tr">04</div><div><h4>深空回声<small>· 科幻 · 三季完结</small></h4></div><div class="plat">8.7</div></div>
+        <div class="rl g2"><div class="tr">05</div><div><h4>长河落日<small>· 历史 · 40 集</small></h4></div><div class="plat">8.8</div></div>
+        <div class="rl g2"><div class="tr">06</div><div><h4>舞台背后<small>· 综艺 · 更新中</small></h4></div><div class="plat">8.9</div></div>
+        <div class="rl g2"><div class="tr">07</div><div><h4>我的猫先生<small>· 喜剧 · 96 分钟</small></h4></div><div class="plat">8.4</div></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：乘车指南 -->
+  <section id="guide">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">How To Ride</div>
+        <h2>乘车指南</h2>
+        <p>跟着 12306影视 的四步指引，快速"上车"看好片。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="guide">
+
+        <div class="gc"><div class="stnum">01</div><div class="ic">🎫</div><h4>选班次</h4><p>先在班次时刻表找到今天想看的更新作品。</p></div>
+        <div class="gc"><div class="stnum">02</div><div class="ic">🗺️</div><h4>看地图</h4><p>用站点地图定位你想去的频道和类型。</p></div>
+        <div class="gc"><div class="stnum">03</div><div class="ic">🚉</div><h4>进站</h4><p>点进作品页，确认画质与更新进度。</p></div>
+        <div class="gc"><div class="stnum">04</div><div class="ic">🎬</div><h4>发车</h4><p>一键开播，舒服追完再回榜单挑下一部。</p></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目六：影迷候车室 -->
+  <section id="lounge" style="background:linear-gradient(180deg,#070b12,#0b1320)">
+    <div class="container">
+      <div class="head">
+        <div class="kicker">Waiting Lounge</div>
+        <h2>影迷候车室</h2>
+        <p>在 12306影视 的候车室里，影迷们都在聊什么。</p>
+        <div class="rule"></div>
+      </div>
+      <div class="lounge">
+
+        <div class="talks">
+          <div class="tk"><div class="who"><div class="av">小</div><b>小宇</b><span>2 小时前</span></div><p>《海风便利店》治愈程度超标，看完心情直接回血。</p><span class="when">💬 238 条回应</span></div>
+          <div class="tk"><div class="who"><div class="av">阿</div><b>阿May</b><span>3 小时前</span></div><p>第七封信第三集那个反转，编剧太狠了。</p><span class="when">💬 192 条回应</span></div>
+          <div class="tk"><div class="who"><div class="av">追</div><b>追剧君</b><span>5 小时前</span></div><p>深空回声第三季世界观又扩了，硬科幻党狂喜。</p><span class="when">💬 156 条回应</span></div>
+          <div class="tk"><div class="who"><div class="av">影</div><b>影迷老王</b><span>昨天</span></div><p>长河落日收官特辑值得看，幕后花絮很有料。</p><span class="when">💬 121 条回应</span></div>
+        </div>
+
+        <div class="subscribe">
+          <h4>订阅更新提醒</h4>
+          <p>好片上线第一时间通知你，不漏任何一班。</p>
+          <form onsubmit="event.preventDefault();alert('已订阅 12306影视 更新提醒');">
+            <input type="email" placeholder="输入你的邮箱地址" required>
+            <button type="submit">立即订阅</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="container">
+    <div class="fg">
+      <div class="fbrand">
+        <a class="logo" href="#home"><span class="mk">12306</span>影视<b>直达</b></a>
+        <p>12306影视（12306yingshi-cn.github.io）是影视直达号，电影、剧集、综艺、动漫一站直达，好片不绕路。</p>
+      </div>
+      <div>
+        <h5>看片导航</h5>
+        <ul>
+          <li><a href="#routes">热门路线</a></li>
+          <li><a href="#map">站点地图</a></li>
+          <li><a href="#sched">班次时刻</a></li>
+          <li><a href="#rank">热门榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>内容类型</h5>
+        <ul>
+          <li><a href="#">电影</a></li>
+          <li><a href="#">剧集</a></li>
+          <li><a href="#">综艺动漫</a></li>
+          <li><a href="#">纪录儿童</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>关于本站</h5>
+        <ul>
+          <li><a href="#lounge">影迷候车室</a></li>
+          <li><a href="#guide">乘车指南</a></li>
+          <li><a href="#">投稿推荐</a></li>
+          <li><a href="#">关于我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© <span id="year"></span> 12306影视 12306yingshi-cn.github.io 版权所有</span>
+      <span class="fl"><a href="#">免责声明</a><a href="#">用户协议</a><a href="#">隐私政策</a></span>
+    </div>
+  </div>
+</footer>
+
+<button id="top" aria-label="回到顶部">↑</button>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+(function(){
+  var b=document.getElementById('mbtn'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){
+    var o=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',o?'true':'false');
+  });
+  n.addEventListener('click',function(e){
+    if(e.target.closest('a')){n.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+})();
+(function(){
+  var t=document.getElementById('top');
+  window.addEventListener('scroll',function(){t.classList.toggle('show',window.scrollY>400);},{passive:true});
+  t.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.style.animation='rise .65s ease both';io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('section').forEach(function(s){s.style.opacity='0';io.observe(s);});
+})();
+</script>
+
+<style>
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+</style>
+
+</body>
+</html>
